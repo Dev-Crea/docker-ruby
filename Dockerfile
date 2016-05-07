@@ -8,7 +8,10 @@ MAINTAINER "VAILLANT Jérémy" <vaillant.jeremy@dev-crea.com>
 RUN echo '{ "allow_root": true, "interactive": false }' > /root/.bowerrc
 
 # MAJ System
-RUN apt-get update -qq && apt-get install -y build-essential node npm git
+RUN apt-get update -qq
+
+# Install essential package
+RUN apt-get install -y build-essential node npm git nodejs-legacy
 
 # Install bower
 RUN npm install -g bower
