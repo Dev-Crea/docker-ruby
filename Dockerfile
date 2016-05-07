@@ -11,7 +11,7 @@ RUN echo '{ "allow_root": true, "interactive": false }' > /root/.bowerrc
 RUN apt-get update -qq
 
 # Install essential package
-RUN apt-get install -y build-essential node npm git nodejs-legacy
+RUN apt-get install -y build-essential npm git nodejs-legacy
 
 # Install bower
 RUN npm install -g bower
